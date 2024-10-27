@@ -17,11 +17,22 @@
           <li><a href="#history">Sejarah</a></li>
           <li><a href="#about">Wisata</a></li>
           <li><a href="#review">Ulasan</a></li>
+          <li class="nav-button">
+            <a
+              href="https://surabaya.go.id/"
+              target="_blank"
+              class="button-more"
+              >Selengkapnya</a
+            >
+          </li>
         </ul>
         <div class="nav-button">
-          <a href="https://surabaya.go.id/" target="_blank" class="button-more"
-            >Selengkapnya</a
-          >
+          <img
+            src="assets/images/hamburger1.svg"
+            alt="hamburger-menu"
+            class="hamburger-menu"
+            onclick="toggleMenu()"
+          />
         </div>
       </nav>
     </header>
@@ -37,13 +48,47 @@
             Kota di mana sejarah, budaya, dan kehidupan modern menjadi satu yang
             pasti bikin kamu betah.
           </p>
-          <a href="#history" class="button-more">Jelajahi Kota!</a>
+          <div class="nav-button">
+            <a href="#history" class="button-more">Jelajahi Kota!</a>
+          </div>
         </div>
         <div class="home-image">
           <img src="assets/images/hero-surabaya.svg" alt="Monumen Surabaya" />
         </div>
       </section>
-      <section id="history"></section>
+      <section id="statistic">
+        <div class="statistic-title">
+          <h2>Mengenal lebih jauh tentang<br />kehidupan kota</h2>
+        </div>
+        <div class="boxes">
+          <div class="box">
+            <p id="populationCounter"></p>
+            <h2>Penduduk tercatat<br />tahun 2023</h2>
+          </div>
+          <div class="box">
+            <p id="areaCounter"></p>
+            <h2>Total luas wilayah<br />administratif</h2>
+          </div>
+          <div class="box">
+            <p id="destinationCounter"></p>
+            <h2>Wisata yang dapat<br />dikunjungi</h2>
+          </div>
+        </div>
+      </section>
+      <section id="history">
+        <div class="history-content">
+          <h2>Sejarah</h2>
+          <p>
+            Surabaya adalah kota terbesar kedua di Indonesia setelah Jakarta.
+            Kota ini memiliki sejarah panjang yang dimulai dari abad ke-12. Pada
+            masa lalu, Surabaya adalah kota pelabuhan yang ramai dan menjadi
+            pusat perdagangan di Jawa Timur. Kota ini juga dikenal sebagai kota
+            pahlawan karena peran pentingnya dalam perjuangan kemerdekaan
+            Indonesia. Surabaya memiliki banyak tempat bersejarah yang bisa
+            dikunjungi, seperti Tugu Pahlawan, Monumen Kapal Selam
+          </p>
+        </div>
+      </section>
       <section id="about">
         <div class="top-destination">
           <h3>Top 3</h3>
@@ -57,8 +102,13 @@
               />
               <div class="card-data">
                 <span class="card-description"> Jl. Pahlawan, Bubutan</span>
-                <h3 class="card-title">Tugu Pahlawan</h3>
-                <a href="" class="card-button">Kunjungi</a>
+                <h3>Tugu Pahlawan</h3>
+                <a
+                  href="https://maps.app.goo.gl/wLVNgWwmdzEVhTrc9"
+                  target="_blank"
+                  class="card-button"
+                  >Kunjungi</a
+                >
               </div>
             </article>
             <article class="card-article">
@@ -69,8 +119,13 @@
               />
               <div class="card-data">
                 <span class="card-description">Jl. Pemuda, Gubeng</span>
-                <h3 class="card-title">Monumen Kapal Selam</h3>
-                <a href="" class="card-button">Kunjungi</a>
+                <h3>Monumen Kapal Selam</h3>
+                <a
+                  href="https://maps.app.goo.gl/g1XokjVmXMxhq2Lk6"
+                  target="_blank"
+                  class="card-button"
+                  >Kunjungi</a
+                >
               </div>
             </article>
             <article class="card-article">
@@ -81,8 +136,13 @@
               />
               <div class="card-data">
                 <span class="card-description">Jl. Taman Apsari, Bubutan</span>
-                <h3 class="card-title">Kota Lama</h3>
-                <a href="" class="card-button">Kunjungi</a>
+                <h3>Kota Lama</h3>
+                <a
+                  href="https://maps.app.goo.gl/fEvLVZUUrmUWzkKT8"
+                  target="_blank"
+                  class="card-button"
+                  >Kunjungi</a
+                >
               </div>
             </article>
           </div>
@@ -105,8 +165,8 @@
                   <p class="article-description">
                     KBS menjadi destinasi wisata edukatif dengan koleksi satwa
                     yang beragam. Pada 2022, kebun binatang ini mendapat
-                    perhatian karena peremajaan beberapa kandang dan fasilitas
-                    baru.
+                    perhatian karena peremajaan beberapa kandang dan dengan
+                    fasilitas baru.
                   </p>
                 </div>
               </article>
@@ -181,57 +241,178 @@
               </article>
             </a>
           </div>
-          <aside class="accommodation">
+          <img
+            src="assets/images/arrow-left.svg"
+            alt="arrow-left"
+            class="arrow-left"
+            onclick="toggleAside()"
+          />
+          <aside id="aside" class="accommodation">
             <h2>Akomodasi</h2>
             <div class="accommodation-item">
               <h3>Hotel Surabaya</h3>
-              <p>Hotel bintang lima dengan fasilitas lengkap.</p>
-              <a
-                href="https://example.com/hotel-surabaya"
-                target="_blank"
-                class="button"
-                >Lihat Selengkapnya</a
-              >
+              <p>Hotel berbintang dengan fasilitas lengkap.</p>
+              <div class="accommodation-btn-img">
+                <img
+                  src="assets/images/hotel.svg"
+                  alt="Hotel Surabaya"
+                  class="accommodation-img"
+                />
+                <a
+                  href="https://www.traveloka.com/id-id/hotel/indonesia/city/surabaya-103570"
+                  target="_blank"
+                >
+                  <img
+                    src="assets/images/button-arrow.svg"
+                    alt="button-more"
+                    class="button-arrow"
+                /></a>
+              </div>
             </div>
             <div class="accommodation-item">
               <h3>Transportasi Umum</h3>
               <p>
                 Informasi mengenai transportasi yang tersedia di kota Surabaya.
               </p>
-              <a
-                href="https://example.com/transportasi"
-                target="_blank"
-                class="button"
-                >Lihat Selengkapnya</a
-              >
+              <div class="accommodation-btn-img">
+                <img
+                  src="assets/images/halte.svg"
+                  alt="Bus Surabaya"
+                  class="accommodation-img"
+                />
+                <a
+                  href="https://www.traveloka.com/id-id/explore/destination/pl-cg-transportasi-di-surabaya/182446"
+                  target="_blank"
+                >
+                  <img
+                    src="assets/images/button-arrow.svg"
+                    alt="button-more"
+                    class="button-arrow"
+                /></a>
+              </div>
             </div>
           </aside>
         </div>
       </section>
       <section id="review">
-        <article>
-          <h2>Tentang Grand Pakuwon Surabaya</h2>
-          <p>
-            Grand Pakuwon Surabaya adalah kawasan wisata dan hunian eksklusif
-            yang terletak di kota Surabaya. Dengan berbagai fasilitas seperti
-            taman, pusat perbelanjaan, danau buatan, serta area rekreasi, tempat
-            ini menjadi salah satu destinasi favorit keluarga di akhir pekan.
-          </p>
-        </article>
-        <article>
-          <h2>Tentang Grand Pakuwon Surabaya</h2>
-          <p>
-            Grand Pakuwon Surabaya adalah kawasan wisata dan hunian eksklusif
-            yang terletak di kota Surabaya. Dengan berbagai fasilitas seperti
-            taman, pusat perbelanjaan, danau buatan, serta area rekreasi, tempat
-            ini menjadi salah satu destinasi favorit keluarga di akhir pekan.
-          </p>
-        </article>
+        <div class="review-title">
+          <h2>Ulasan Pengunjung</h2>
+          <h3>
+            Pengalaman berkesan menjelajahi Kota Surabaya dengan<br />berbagai
+            macam pilihan wisata menarik.
+          </h3>
+        </div>
+        <div class="review-slider">
+          <div class="slide-track">
+            <div class="review-card">
+              <div class="rating">
+                <img src="assets/images/user1.svg" alt="avatar" />
+                <h4>Ahmad</h4>
+                <span>★★★★★</span>
+              </div>
+              <p>
+                Surabaya adalah kota yang sangat ramah dengan banyak tempat
+                menarik untuk dikunjungi!
+              </p>
+            </div>
+            <div class="review-card">
+              <div class="rating">
+                <img src="assets/images/user2.svg" alt="avatar" />
+                <h4>Siti</h4>
+                <span>★★★★★</span>
+              </div>
+              <p>
+                Makanan di Surabaya sangat lezat dan bervariasi, terutama rawon
+                dan rujak cingur!
+              </p>
+            </div>
+            <div class="review-card">
+              <div class="rating">
+                <img src="assets/images/user3.svg" alt="avatar" />
+                <h4>Joko</h4>
+                <span>★★★★★</span>
+              </div>
+              <p>
+                Kota ini penuh dengan sejarah dan budaya, saya sangat menikmati
+                kunjungan saya.
+              </p>
+            </div>
+            <div class="review-card">
+              <div class="rating">
+                <img src="assets/images/user4.svg" alt="avatar" />
+                <h4>Rina</h4>
+                <span>★★★★★</span>
+              </div>
+              <p>
+                Infrastruktur transportasi di Surabaya sangat baik dan mudah
+                diakses.
+              </p>
+            </div>
+            <div class="review-card">
+              <div class="rating">
+                <img src="assets/images/user5.svg" alt="avatar" />
+                <h4>Andi</h4>
+                <span>★★★★★</span>
+              </div>
+              <p>
+                Pantai di Surabaya sangat indah dan tempat yang bagus untuk
+                bersantai.
+              </p>
+            </div>
+            <div class="review-card">
+              <div class="rating">
+                <img src="assets/images/user6.svg" alt="avatar" />
+                <h4>Fitri</h4>
+                <span>★★★★★</span>
+              </div>
+              <p>
+                Surabaya memiliki banyak taman dan ruang terbuka hijau, cocok
+                untuk rekreasi.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
+    <hr class="main-footer-divider" />
     <footer>
-      <p>&copy; 2024 Wisata Grand Pakuwon Surabaya. Semua Hak Dilindungi.</p>
-      <p>Email: info@grandpakuwonsurabaya.com | Telepon: (031) 123-4567</p>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img
+            src="assets/images/Surabaya-Logo.png"
+            alt="Logo Surabaya"
+            class="logo-surabaya"
+          />
+        </div>
+        <div class="footer-section">
+          <h4>Tentang Surabaya</h4>
+          <p>
+            Surabaya adalah ibukota Jawa Timur, dikenal dengan sejarahnya yang
+            kaya, kuliner khas, dan destinasi wisata menarik.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h4>Hubungi Kami</h4>
+          <p>Email: dinkominfo@surabaya.go.id</p>
+          <p>Telepon: (031) 5312144</p>
+        </div>
+        <div class="footer-section">
+          <h4>Ikuti Kami</h4>
+          <div class="social-icons">
+            <a
+              href="https://www.facebook.com/@HumasPemkotSurabaya/"
+              target="_blank"
+              ><img src="assets/images/logo-fb.svg" alt="Facebook"
+            /></a>
+            <a href="https://www.instagram.com/surabaya/" target="_blank"
+              ><img src="assets/images/logo-ig.svg" alt="Instagram"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-section copyright">
+        <p>&copy; 2024 raihanekp. All Rights Reserved.</p>
+      </div>
     </footer>
     <script src="assets/script.js"></script>
   </body>
